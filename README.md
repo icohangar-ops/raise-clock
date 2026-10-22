@@ -2,7 +2,7 @@
 
 **When must a junior mining company start its next financing?** Raise Clock turns cash, G&A burn, the drill program and the flow-through commitment into one date: *start your raise by …* — plus a cash chart, a flow-through check, and a copy-ready board note.
 
-Live demo: https://raise-clock.vercel.app (if deployed) · Built for Devpost **Build With AI: Basics** (Oct 2026).
+Live demo: https://raise-clock.vercel.app · Built for Devpost **Build With AI: Basics** (Oct 2026).
 
 ## Why
 Exploration companies have no revenue. A raise takes ~3 months, boards want a cash buffer, and flow-through money must be spent on eligible exploration by a deadline. Most CFOs track this in a spreadsheet; missing the window means a discounted, dilutive financing. Raise Clock answers the one question that matters.
