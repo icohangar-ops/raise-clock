@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raise Clock — when must a junior miner start its next raise?</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><div class="brand"><span class="dot"></span>Raise Clock</div><p>Runway &amp; financing timer for junior mining CFOs</p></header>
+<main>
+<form id="inputs" autocomplete="off">
+  <h2>Company</h2>
+  <label>Name<input name="company" type="text"></label>
+  <label>Cash on hand ($)<input name="cash" type="number" step="10000"></label>
+  <label>As of month<input name="startMonth" type="month"></label>
+  <label>Monthly G&amp;A burn ($)<input name="ga" type="number" step="5000"></label>
+  <h2>Drill program</h2>
+  <label>Total cost ($)<input name="drillCost" type="number" step="50000"></label>
+  <label>Duration (months)<input name="drillMonths" type="number" min="1"></label>
+  <label>Starts in month <output id="drillStartOut"></output><input name="drillStart" type="range" min="1" max="24"></label>
+  <h2>Financing</h2>
+  <label>Flow-through committed ($)<input name="ftAmount" type="number" step="50000"></label>
+  <label>Flow-through spend deadline<input name="ftDeadline" type="month"></label>
+  <label>Cash buffer (months of G&amp;A)<input name="bufferMonths" type="number" min="0"></label>
+  <label>Raise lead time (months)<input name="leadMonths" type="number" min="0"></label>
+  <button type="button" id="reset" class="ghost">Reset to sample</button>
+</form>
+<section id="results">
+  <div id="headline" class="headline"><small>Financing clock</small><strong id="headlineText"></strong><span id="headlineSub"></span></div>
+  <div class="tiles">
+    <div class="tile"><small>Runway</small><b id="tRunway"></b><span id="tZero"></span></div>
+    <div class="tile"><small>Buffer floor</small><b id="tBuffer"></b><span id="tBreach"></span></div>
+    <div class="tile" id="ftTile"><small>Flow-through</small><b id="tFt"></b><span id="tFtSub"></span></div>
+  </div>
+  <div class="card"><div class="cardhead"><small>Month-end cash, next 36 months</small><span class="legend"><i class="lg-cash"></i>cash <i class="lg-drill"></i>drilling <i class="lg-buf"></i>buffer</span></div><div id="chart"></div></div>
+  <div class="card"><div class="cardhead"><small>Board note</small><button type="button" id="copy">Copy board note</button></div><pre id="note"></pre></div>
+</section>
+</main>
+<footer>Deterministic model · monthly granularity · nothing leaves your browser</footer>
+<script type="module" src="src/app.js"></script>
+</body></html>

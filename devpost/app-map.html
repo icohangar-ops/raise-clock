@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><title>Raise Clock — App Map</title>
+<style>body{font:15px/1.5 system-ui;background:#0f1419;color:#e8edf2;max-width:760px;margin:40px auto;padding:0 20px}code{color:#c8793a}li{margin:6px 0}h1{color:#c8793a}</style>
+<h1>Raise Clock — App Map</h1>
+<p>Follow one action: <b>you change “Cash on hand”</b>.</p>
+<ol>
+<li><code>index.html</code> — the form field <code>name="cash"</code> fires an <code>input</code> event.</li>
+<li><code>src/app.js › update()</code> — reads the form, runs <code>validate()</code>, saves to localStorage (<code>raiseclock.v1</code>).</li>
+<li><code>src/model.js › project()</code> — walks 36 months: closing = opening − G&amp;A − drill; records buffer breach, zero-cash month and flow-through spend.</li>
+<li><code>src/model.js › headline()</code> — raise-by = breach month − lead time.</li>
+<li><code>src/chart.js › renderChart()</code> and <code>boardNote()</code> paint the result.</li>
+</ol>
+<p><b>Practice to reuse:</b> keep the money math in one pure, tested module (<code>tests/model.test.js</code>) and let the UI only read and paint.</p>
