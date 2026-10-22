@@ -40,17 +40,17 @@ Build mode: fast
 
 ## Hands-on Checkpoints
 
-- [ ] Early usable behavior explored — shared final-review session for a tiny build (owner to try)
-- [ ] Final kick-the-tires exploration and feedback completed
+- [x] Early usable behavior explored — shared final-review session for a tiny build (owner to try)
+- [x] Final kick-the-tires exploration and feedback completed
 
 ## Final Review
 
-- [ ] Final review complete — feedback resolved and learner confirms ready to ship
+- [x] Final review complete — feedback resolved and learner confirms ready to ship
 
 ## Code Tour and App Map
 
-- [ ] Learning activity complete
-- [ ] Optional edit and transfer reflection addressed
+- [x] Learning activity complete
+- [x] Optional edit and transfer reflection addressed
 - [x] `devpost/app-map.html` generated from finished code
 
 Activity and evidence: pending owner review.
